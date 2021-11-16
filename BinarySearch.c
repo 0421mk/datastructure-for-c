@@ -10,9 +10,11 @@ int BSearch(int * ar, int len, int target) {
 	int first = 0;
 	int last = len - 1;
 	int mid;
+	int opCount = 0;
 	
 	while(first<=last) {
 		mid = (first+last)/2;
+		opCount++;
 		
 		if(ar[mid] == target) {
 			return mid;
@@ -25,13 +27,14 @@ int BSearch(int * ar, int len, int target) {
 		}
 	}
 	
+	printf("비교 연산 횟수 : %d\n", opCount);
 	return -1;
 	
 }
 
 int main(void) {
 	
-	int ar[] = {2,4,6,8,10};
+	int ar[500000] = {0, };
 	
 	int result = BSearch(ar, sizeof(ar)/sizeof(int), 2);
 	
