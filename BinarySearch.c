@@ -14,27 +14,26 @@ int BSearch(int * ar, int len, int target) {
 	while(first<=last) {
 		mid = (first+last)/2;
 		
-		printf("mid : %d\n", mid);
-		
-		if(target == ar[mid]) {
+		if(ar[mid] == target) {
 			return mid;
-		}	
-		else if(target > ar[mid]) {
-			first = mid + 1;
-		} else if(target < ar[mid]) {
-			last = mid - 1;
+		} else {
+			if(ar[mid] < target) {
+				first = mid + 1;
+			} else {
+				last = mid - 1;
+			}
 		}
 	}
 	
 	return -1;
-} 
+	
+}
 
 int main(void) {
 	
 	int ar[] = {2,4,6,8,10};
 	
-	int result = BSearch(ar, sizeof(ar)/sizeof(int), 6);
-	printf("%d", result);
+	int result = BSearch(ar, sizeof(ar)/sizeof(int), 2);
 	
 	if(result == -1) {
 		printf("존재하지 않습니다.\n");
