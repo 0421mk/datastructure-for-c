@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-// ADT : 순차탐색
+// ADT : 순차탐색 
 // LSearch => 탐색 성공시 탐색한 값 반환, 실패시 -1 반환 
 // int 배열 자료형으로 예시 수행 
 
 int LSearch(int * ar, int len, int idx) {
-	for(int i = 0; i < len; i++) {
+	int i;
+	for(i = 0; i < len; i++) {
 		if(ar[i] == idx) {
 			return i;
 		}
