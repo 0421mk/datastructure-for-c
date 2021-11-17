@@ -18,7 +18,7 @@ void LInsert(List * plist, LData data)
 	(plist->numOfData)++; // 데이터 인덱스를 채우고 다음 전체 데이터 값을 1 올린다. 
 }
 
-int LFirst(List * plist, LData * pdata)
+int LFirst(List * plist, LData * pdata) // LData 는 Point * 이므로 이중포인터이다. 
 {
 	if(plist->numOfData == 0)
 		return FALSE; // 데이터가 없으면 참조할 데이터가 없다. 
