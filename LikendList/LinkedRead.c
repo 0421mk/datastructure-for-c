@@ -13,7 +13,11 @@ int main(void) {
 	Node * cur = NULL;
 	
 	Node * newNode = NULL;
+	Node * dummy = (Node *)malloc(sizeof(Node));
 	int readData;
+	
+	head = dummy;
+	tail = dummy;
 	
 	while(1) {
 		printf("자연수 입력 : ");
@@ -29,9 +33,10 @@ int main(void) {
 		newNode->next = NULL;
 		
 		if(head == NULL) {
-			head = newNode; // 첫번째 데이터 초기화 
+
 		} else {
 			tail->next = newNode; // 아래 tail = newNode와 연관
+			tail = newNode;
 			// 첫번째 실행시 head와 tail은 각각 같은 노드의 주소를 가리킴
 			// 여기서 중요한 점은 노드의 주소
 			// 그로 인해 다음 노드를 입력받을 때 tail->next = newNode를 한다면
@@ -40,8 +45,6 @@ int main(void) {
 			// 따라서 head의 데이터는 초기화, next는 새로 입력받은 데이터, 그리고 아래
 			// tail = newNode로 인해 tail은 새로 입력받은 데이터, next는 NULL을 가리킴 
 		}
-		
-		tail = newNode;
 	}
 	
 	printf("\n\n");
