@@ -1,6 +1,5 @@
 #include <string.h>
 #include <ctype.h>
-#include "ListBaseStack.c"
 
 int EvalRPNExp(char exp[])
 {

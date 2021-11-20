@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "ListBaseStack.h"
 #include "ListBaseStack.c"
 
 int GetOpPrec(char op) {
