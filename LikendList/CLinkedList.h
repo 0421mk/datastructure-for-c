@@ -4,7 +4,10 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef int Data;
+#include "Employee.h"
+
+// typeddef int Data;
+typedef Employee * Data;
 
 typedef struct _node
 {
