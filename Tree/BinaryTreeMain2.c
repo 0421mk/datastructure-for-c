@@ -22,15 +22,12 @@ int main(void)
 	MakeLeftSubTree(bt1, bt2);
 	MakeRightSubTree(bt1, bt3);
 	MakeLeftSubTree(bt2, bt4);
-	MakeLeftSubTree(bt2, bt5);
+	MakeRightSubTree(bt2, bt5);
 	MakeLeftSubTree(bt3, bt6);
 	
-	PreorderTraverse(bt1, ShowInData);
-	printf("\n");
+	DeleteTree(bt1);
+	
 	InorderTraverse(bt1, ShowInData);
-	printf("\n");
-	PostorderTraverse(bt1, ShowInData);
-	printf("\n");
 	
 	return 0;
 }
@@ -39,3 +36,4 @@ void ShowInData(int data)
 {
 	printf("%d ", data);
 }
+
